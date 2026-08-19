@@ -1,0 +1,2 @@
+# Computational-approaches-to-predicting-xenobiotic-metabolism-by-the-human-gut-microbiota
+Supplementary data and code for the review article "Computational approaches to predicting xenobiotic metabolism by the human gut microbiota" (Expert Opinion on Drug Metabolism &amp; Toxicology). Contains the full MASI + MDIPID/MMDR merge pipeline (12 steps), statistical analysis scripts, and the final 8,886-record dataset with 38 standardized columns.
