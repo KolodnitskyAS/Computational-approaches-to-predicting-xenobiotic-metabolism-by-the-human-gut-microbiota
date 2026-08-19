@@ -1,0 +1,18 @@
+metric,value,pct
+Total records,8886.0,
+In vitro records,6870.0,77.3%
+In vivo records,172.0,1.9%
+System annotated records,7272.0,81.8%
+Method-annotated records,3612.0,40.6%
+HTS records,3401.0,38.3%
+HTS % of method-annotated,,94.2%
+HTS % of in-vitro-with-methods,,100.0%
+Protein-level annotations (Gene_Info),1062.0,12.0%
+EC classification records,1036.0,11.7%
+KM records,68.0,0.77%
+KM_combination records,50.0,0.56%
+Unique enzymes with Km (by protein),13.0,
+Drugs with Km / total drugs,29.0,29/1123 (2.6%)
+Source distribution,,N/A
+Unique microbes,656.0,
+Unique drugs,1123.0,
