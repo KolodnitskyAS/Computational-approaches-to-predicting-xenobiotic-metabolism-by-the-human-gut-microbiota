@@ -5,15 +5,57 @@ This folder provides the complete data-integration pipeline, analysis code, and 
 ## Contents
 
 ```
-├── data
-│   ├── MASI_MMDR_combined.xlsx              — combined dataset before enrichment (Step 3 output, 10,969 rows)
-│   ├── MASI_MMDR_combined_enriched.xlsx     — final enriched dataset (pipeline output, 8,886 rows × 38 columns)
-│   └── Enriched_Dataset.xlsx                — final dataset used for statistical analysis (8,886 rows × 38 columns)
-├── full_pipeline.py                         — end-to-end 12-step merge pipeline (Steps 3–12)
-├── statistical_analysis.py                  — reproduces all quantitative results reported in the manuscript
-├── data_dictionary.csv                      — column-by-column description of the final dataset
-├── statistical_analysis_summary.csv         — output of statistical_analysis.py
-└── README.md                                — this file
+├── data/
+│   │
+│   │── # ── Raw MASI source files ──
+│   ├── MASI_v1.0_download_microbeSubstanceInteractionRecords_ver20200928.xlsx
+│   │       Main MASI interaction table 
+│   ├── MASI_v1.0_download_microbesInfo.xlsx
+│   │       MASI supplementary: microbe taxonomy and probiotic annotations
+│   ├── MASI_v1.0_download_substanceInfo.xlsx
+│   │       MASI supplementary: substance/drug identifiers and properties
+│   │
+│   │── # ── Raw MMDR/MDIPID source files ──
+│   ├── 1.General Information of Microbiota.csv
+│   │       MMDR supplementary: microbe taxonomy
+│   ├── 2_General_Info_Drug_Substance.csv
+│   │       MMDR supplementary: drug/substance properties (PubChem CID, SMILES, etc.)
+│   ├── 4_General_Info_Microbial_Protein.csv
+│   │       MMDR supplementary: protein annotations (EC, UniProt, KEGG, FASTA)
+│   ├── 5_Data_MMDR.csv
+│   │       Main MMDR interaction table
+│   ├── 6_Data_DEIM.csv
+│   │       MMDR supplementary: Drug Effect on Intestinal Microbiota (DEIM).
+│   │       NOTE: These records describe drug-induced changes in microbiota
+│   │       composition and are NOT included in the merged analysis.
+│   │       Retained here for reference only.
+│   │
+│   │── # ── Pipeline intermediate files ──
+│   ├── MASI_merged_enriched.xlsx
+│   │       Step 1 output: MASI main + supplementary merged (4,295 rows × 47 cols)
+│   ├── MMDR_merged_enriched.xlsx
+│   │       Step 2 output: MMDR main + supplementary merged (6,674 rows × 91 cols)
+│   └── MASI_MMDR_combined.xlsx
+│           Step 3 output: combined dataset before enrichment (10,969 rows × 119 cols)
+│
+├── output/
+│   ├── Enriched_Dataset.xlsx
+│   │       Final merged dataset 
+│   ├── data_dictionary.csv
+│   │       Column-by-column description of the final dataset
+│   └── statistical_analysis_summary.csv
+│           Summary statistics produced by statistical_analysis.py
+│
+├── scripts/
+│   ├── full_pipeline.py
+│   │       12-step merge pipeline 
+│   └── statistical_analysis.py
+│           All quantitative results reported in the manuscript
+│
+├── README.md
+├── LICENSE
+├── requirements.txt
+└── .gitignore
 ```
 
 ## Database versions and access dates
