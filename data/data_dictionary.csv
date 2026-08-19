@@ -1,0 +1,39 @@
+Column,Description,Type,Example,Source
+Microbe_Name,"Scientific name of the microorganism",string,"Achromobacter denitrificans",MASI/MMDR
+microbe_tax_level,"Taxonomic level (species, genus, family)",string,"Class",MASI/MMDR
+genus_name,"Genus name (modern nomenclature after Step 7)",string,"Achromobacter",MASI/MMDR/Step7
+family_name,"Family name (modern nomenclature after Step 7)",string,"Alcaligenaceae",MASI/MMDR/Step7
+Strain,"Strain identifier if available",string,".",MMDR
+Substance_Name,"Canonical name of the drug/compound",string,"Sulfacetamide",MASI/MMDR
+Substance-Category,"Category: Therapeutic/Dietary/Herbal/Environmental",string,"Therapeutic Substance; Herbal Substance",MASI/MMDR
+PubChem_CID,"PubChem Compound ID (required for small molecules)",integer/string,"5320",MASI/MMDR
+InChIKey,"IUPAC International Chemical Identifier Key",string,"SKIVFJLNDNKQPD-UHFFFAOYSA-N",MMDR
+id_drugbank,"DrugBank identifier",; string,"DB00316",MMDR
+InChI,"(see manuscript)",string,"InChI=1S/C8H10N2O3S/c1-6(11)10-14(12,13)8-4-2-7(9)",MASI/MMDR
+Canonical_SMILES,"Canonical SMILES representation",string,"CC(=O)NS(=O)(=O)C1=CC=C(C=C1)N",MMDR
+ChEBI,"ChEBI ontology identifier",string,"CHEBI:63845",MMDR
+Synonyms,"Alternative names for the substance",string,"sulfacetamide; 144-80-9; Sulphacetamide; Acetosulf",MASI/MMDR
+Metabolism_Type,"Type of microbial metabolism (e.g. Hydrolysis, Reduction)",string,".",MASI/MMDR
+Metabolism_Enzymes,"Enzyme(s) responsible for metabolism",string,"n.a.",MASI/MMDR
+Metabolism_Effect_on_Drug,"Effect on drug activity/PK",string,"degradation of drug",MASI/MMDR
+Metabolism_Mechanism,"Molecular mechanism of metabolism",string,"The Achromobacter denitrificans has been reported ",MASI/MMDR
+Microbiota_Influence,"How microbiota influences the interaction",string,"Degradation of Sulfacetamide",MASI/MMDR
+Outcome,"Biological/clinical outcome of the interaction",string,"Impede the ability to detoxify acetaminophen,accum",MASI/MMDR
+Metabolites_Info,"Metabolites produced (with CID if available)",string,"Propionate (CID:104745); Succinate (CID:160419)",Step8
+Related_protein,"Protein/enzyme involved in the interaction",string,".",MMDR
+Gene_Info,"Gene name and protein description (merged in Step 8)",string,"blaVIM-2 | Metallo-Beta-lactamase",Step8
+EC_Classification,"EC number and hierarchy (merged in Step 8)",string,"3.5.2.6 | Hydrolases → Carbon-nitrogen hydrolase →",Step8
+UniprotAC,"UniProt accession code",string,".",MMDR
+ProteinSynonyms_Standarized,"Standardized protein synonyms",string,"Metallo-beta-lactamase NDM-1; New Delhi metallo-be",MMDR
+PDB_id,"Protein Data Bank identifier",string,".",MMDR
+KEGG_pathway,"KEGG pathway mapping",string,".",MMDR
+FASTA,"Protein amino acid sequence",string,"MFKLLSKLLVYLTASIMAIASPLAFSVDSSGEYPTVSEIPVGEVRLYQIA",MMDR
+Function,"Protein function description",string,"This enzyme hydrolyzes beta-lactam.",MMDR
+Experiment_System,"Experimental system (in vivo, in vitro, clinical)",string,".",MASI/MMDR
+Experiment_Model_Species,"Model species used in experiment",string,".",MASI/MMDR
+Experiment_Methods,"Experimental methods used",string,".",MASI/MMDR
+Reference_ID_Type,"Reference type (PMID, DOI, etc.)",string,"PMID",MASI/MMDR
+Reference_ID,"Reference identifier (PubMed ID, DOI)",string,"PMID: 26972811",MASI/MMDR
+Notes,"Additional notes and context",string,"Strain PR1 was also able to degrade other sulfonam",MASI/MMDR
+KM,"Michaelis constant (kinetic parameter)",float,"Km values of Ginsenoside Rb1 was 0.69 mM; the V (m",MMDR/Step11
+KM_combination,"KM with substrate/cofactor combination info",string,"0.7 s(-1)mm(-1)",MMDR/Step11
