@@ -20,7 +20,7 @@ Dataset
  11. Microbe diversity statistics
  12. Drug diversity statistics
 
-Input:  Enriched_Dataset.xlsx (8,886 rows x 38 columns)
+Input:  Enriched_Dataset.xlsx
 Output: Printed statistical report + CSV summary table
 
 Usage:
@@ -36,9 +36,9 @@ import sys
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-DATA_DIR = "/home/z/my-project/download"
+DATA_DIR = "/home/..."
 INPUT_FILE = "Enriched_Dataset.xlsx"
-OUTPUT_DIR = "/home/z/my-project/download"
+OUTPUT_DIR = "/home/..."
 
 
 def load_dataset():
@@ -46,7 +46,7 @@ def load_dataset():
     path = os.path.join(DATA_DIR, INPUT_FILE)
     if not os.path.exists(path):
         # Try upload dir as fallback
-        path = os.path.join("/home/z/my-project/upload", INPUT_FILE)
+        path = os.path.join("/home/...", INPUT_FILE)
     if not os.path.exists(path):
         print(f"ERROR: Cannot find {INPUT_FILE}")
         sys.exit(1)
@@ -133,7 +133,7 @@ def stat_hts_bias(df):
     meth_col = "Experiment_Methods"
     sys_col = "Experiment_System"
 
-    # Records with any method annotation (not empty / "." / "n.a.")
+    
     has_method = (
         df[meth_col].notna() &
         ~df[meth_col].astype(str).str.strip().isin(["", ".", "n.a."])
