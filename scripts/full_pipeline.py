@@ -18,7 +18,7 @@ MASI + MMDR Microbiome-Drug Interaction Dataset — Full Merge Pipeline
   Step 11: Add back KM + KM_combination from original MMDR
   Step 12: Filter to small molecules only (valid PubChem_CID required)
 
-Input files expected in DOWNLOAD_DIR:
+Input files expected:
   - MASI main Excel + supplementary taxonomy/probiotic Excel
   - MMDR main Excel + supplementary drug/protein/taxonomy Excel
   (or pre-merged: MASI_merged_enriched.xlsx, MMDR_merged_enriched.xlsx)
@@ -343,20 +343,7 @@ def step4_internal_enrichment(df):
     return df
 
 def step5_audit_pair_enrichment(df, df_pre_enrichment):
-    """
-    Compare enriched file vs pre-enrichment file to find cells that were
-    incorrectly filled at the pair level.
-
-    Problem: If a microbe+substance pair has TWO different interactions
-    (e.g., two different enzymes), pair-level enrichment may copy protein/EC/gene
-    data from one interaction to another — which is WRONG.
-
-    Detection: For each MMDR row, check if pair-level columns (protein, EC, gene)
-    were filled by enrichment AND the pair has multiple different proteins.
-    If so → revert to NaN.
-
-    Result: 197 cells reverted to NaN.
-    """
+    
     print("\n" + "="*70)
     print("STEP 5: Audit & revert incorrectly filled pair-level cells")
     print("="*70)
